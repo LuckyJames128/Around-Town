@@ -76,4 +76,3 @@ tile_set = SubResource("TileSet_358ap")
 format = 2
 layer_0/name = "background"
 layer_1/name = "floor"
-layer_1/y_sort_enabled = true

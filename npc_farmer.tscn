@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://bhi4yv14njyu5"]
+
+[ext_resource type="Script" path="res://npc_farmer.gd" id="1_oulvp"]
+[ext_resource type="Texture2D" uid="uid://mhqy51ubf14j" path="res://art/npcs/NPC_Farmer/FarmerNPC (1).png" id="1_qclie"]
+[ext_resource type="Texture2D" uid="uid://deiwnmj5gqcm" path="res://art/npcs/NPC_Farmer/FarmerNPC (2).png" id="2_l5jd4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iio4e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_qclie")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_l5jd4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="NPC_Farmer" type="StaticBody2D"]
+script = ExtResource("1_oulvp")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -5.96046e-08)
+scale = Vector2(0.0710644, 0.0746765)
+sprite_frames = SubResource("SpriteFrames_iio4e")
+frame_progress = 0.979547
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(0.0702097, 0.0756922)
+polygon = PackedVector2Array(-48, 18, -48.6112, 103.428, 30.7018, 103.428, 31, 18, 57, -16, 57, -16, 57, -76, 25, -103, -40, -103, -72, -78.4757, -72, -10)
