@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://bj8ax68x5e7eg"]
+[gd_scene load_steps=9 format=3 uid="uid://bj8ax68x5e7eg"]
 
-[ext_resource type="Script" uid="uid://c51csons82lam" path="res://main.gd" id="1_il7hv"]
+[ext_resource type="Script" uid="uid://dwj4w46proigi" path="res://main.gd" id="1_il7hv"]
 [ext_resource type="PackedScene" uid="uid://dwhx48co0kpe1" path="res://tile map 1.tscn" id="2_h2yge"]
 [ext_resource type="Texture2D" uid="uid://cd58k42ri3ec3" path="res://backdrop 2.jpg" id="3_lquwl"]
 [ext_resource type="PackedScene" uid="uid://c783etkf80i6b" path="res://player.tscn" id="3_wsri3"]
-[ext_resource type="PackedScene" path="res://npc_farmer.tscn" id="8_va8dd"]
+[ext_resource type="PackedScene" uid="uid://pywdngkrx7hi" path="res://actionable.tscn" id="5_7mycd"]
+[ext_resource type="PackedScene" uid="uid://bhi4yv14njyu5" path="res://npc_farmer.tscn" id="8_va8dd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v5um8"]
 texture = ExtResource("3_lquwl")
@@ -1055,8 +1056,12 @@ tile_set = SubResource("TileSet_7mycd")
 [node name="NPC_Farmer" parent="TileMap" instance=ExtResource("8_va8dd")]
 position = Vector2(135, 45)
 
+[node name="Actionable" parent="TileMap/NPC_Farmer" instance=ExtResource("5_7mycd")]
+
+[node name="NPC_Farmer2" parent="TileMap" instance=ExtResource("8_va8dd")]
+position = Vector2(102, 48)
+
 [node name="player" parent="TileMap" instance=ExtResource("3_wsri3")]
-position = Vector2(0, -28)
 
 [node name="Camera2D2" type="Camera2D" parent="TileMap/player"]
 position = Vector2(0, -4)
