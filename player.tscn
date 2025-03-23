@@ -1,16 +1,16 @@
-[gd_scene load_steps=14 format=3 uid="uid://bxex66p4s4ac5"]
+[gd_scene load_steps=14 format=3 uid="uid://c783etkf80i6b"]
 
-[ext_resource type="Script" path="res://player.gd" id="1_rhrce"]
-[ext_resource type="Texture2D" uid="uid://dt2k8e7lohuib" path="res://art/player/Gardener/Gardener (1).png" id="2_fdnob"]
-[ext_resource type="Texture2D" uid="uid://duyix3q4qatd8" path="res://art/player/Gardener/Gardener (2,6).png" id="3_0h0ba"]
-[ext_resource type="Texture2D" uid="uid://c0vmyv4d5qapm" path="res://art/player/Gardener/Gardener (3,5).png" id="4_nhv0p"]
-[ext_resource type="Texture2D" uid="uid://msb205t8ewcr" path="res://art/player/Gardener/Gardener (4).png" id="5_fy5qp"]
-[ext_resource type="Texture2D" uid="uid://v5mcptpcc3jw" path="res://art/player/Gardener/Gardener (7).png" id="6_qv0y0"]
-[ext_resource type="Texture2D" uid="uid://ce2h6e6kc582i" path="res://art/player/Gardener/Gardener (8).png" id="7_elski"]
-[ext_resource type="Texture2D" uid="uid://cw0eb2u6ufa76" path="res://art/player/Gardener/Gardener (9).png" id="8_7j3pa"]
-[ext_resource type="Texture2D" uid="uid://b1lfnyv7deprw" path="res://art/player/Gardener/Gardener (10).png" id="9_t1cwx"]
-[ext_resource type="Texture2D" uid="uid://dw5rcktby5gvf" path="res://art/player/Gardener/Gardener (11).png" id="10_38528"]
-[ext_resource type="Texture2D" uid="uid://db8fphsgp55fo" path="res://art/player/Gardener/Gardener (12).png" id="11_8klrm"]
+[ext_resource type="Script" uid="uid://dsqvevlvkncah" path="res://player.gd" id="1_rhrce"]
+[ext_resource type="Texture2D" uid="uid://n4nfbw23kck2" path="res://art/player/Gardener/Gardener (1).png" id="2_fdnob"]
+[ext_resource type="Texture2D" uid="uid://c2rhd8x64uh01" path="res://art/player/Gardener/Gardener (2,6).png" id="3_0h0ba"]
+[ext_resource type="Texture2D" uid="uid://btfni02yn640m" path="res://art/player/Gardener/Gardener (3,5).png" id="4_nhv0p"]
+[ext_resource type="Texture2D" uid="uid://c7h1jo2oqs3sa" path="res://art/player/Gardener/Gardener (4).png" id="5_fy5qp"]
+[ext_resource type="Texture2D" uid="uid://dekle0kgagcjb" path="res://art/player/Gardener/Gardener (7).png" id="6_qv0y0"]
+[ext_resource type="Texture2D" uid="uid://chn5a3lj8ijgq" path="res://art/player/Gardener/Gardener (8).png" id="7_elski"]
+[ext_resource type="Texture2D" uid="uid://kesofbc6thwu" path="res://art/player/Gardener/Gardener (9).png" id="8_7j3pa"]
+[ext_resource type="Texture2D" uid="uid://be0tlcgbtl7w1" path="res://art/player/Gardener/Gardener (10).png" id="9_t1cwx"]
+[ext_resource type="Texture2D" uid="uid://byjav5j6aqvnf" path="res://art/player/Gardener/Gardener (11).png" id="10_38528"]
+[ext_resource type="Texture2D" uid="uid://bkvc7n61umk5i" path="res://art/player/Gardener/Gardener (12).png" id="11_8klrm"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_00q0w"]
 animations = [{
@@ -60,7 +60,7 @@ animations = [{
 size = Vector2(19, 7)
 
 [node name="player" type="CharacterBody2D"]
-collision_mask = 7
+collision_mask = 3
 script = ExtResource("1_rhrce")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
