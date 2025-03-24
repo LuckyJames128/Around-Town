@@ -816,6 +816,7 @@ sources/3 = SubResource("TileSetAtlasSource_v5um8")
 script = ExtResource("1_il7hv")
 
 [node name="TileMap" parent="." instance=ExtResource("2_h2yge")]
+position = Vector2(0, -1)
 tile_set = SubResource("TileSet_7mycd")
 
 [node name="NPC_Farmer" parent="TileMap" instance=ExtResource("8_va8dd")]
