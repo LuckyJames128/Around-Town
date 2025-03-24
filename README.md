@@ -4,7 +4,7 @@
 - Down arrow key to initiate dialogue
 
 - Some NPC's have game-necessary quests
-- These are marked with an exclamation point over their head
+  - These are marked with an exclamation point over their head
 
 - We planned to have more features, but we were unable to make all of our ideas a reality with the 48h time limit
 ## Code notes
