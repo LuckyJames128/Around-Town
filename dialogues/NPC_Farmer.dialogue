@@ -1,0 +1,44 @@
+~ start
+# if GameState.quest_point == 0
+Farmer: *sigh*
+- What's wrong?
+Farmer: My crops aren't growing properly.
+Farmer: If these here crops don't grow, I won't have enough food to feed me, my wife, or any one of  my 366 children.
+Farmer: And all this on little Jake Jimmy John Jameson's birthday... what a shame...
+- Did you say you had... 366 kids?
+	# set GameState.kids += 1
+	~ kidspoint
+	Farmer: Yep! One for everyday of the year!
+	Farmer: Each and every one of them are my world... and that means I have 366 worlds!
+	Farmer: Going out to eat as a family is impossible... [speed=0.8]or just eating as a family... [speed=0.4] or sometimes just eating...
+	- Do you know what's causing the issue?
+		=> checkpoint1
+- Do you know what's causing the issue?
+	~ checkpoint1
+	Farmer: I mean... If I did, I wouldn't be complaining to ya, now would I?
+	- I can help you find the trouble! 
+		~ endquest1
+		Farmer: Really? Thank You!
+		- Hey... What's your name by the way?
+			# GameState.name_know = true
+			Farmer John Jonah Jameson Jr: My name is Farmer John Jonah Jameson Jr, son of Farmer John Jonah Jameson Sr. and Farmer Johnetta Jonetta Jameson Sr, brother to Johnetta Jonetta Jameson Jr.
+			=> END
+	- That's too bad...
+		Farmer: Wait... Could you help me?
+		- Sure!
+			=> endquest1
+		- No
+			~ please1
+			Farmer: Please?
+			- Sure!
+				=> endquest1
+			- No
+				=> please1
+
+
+
+
+	# if GameState.kids == 1
+		#Farmer: I swore I told you that though?
+
+=> END
