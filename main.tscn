@@ -822,7 +822,7 @@ tile_set = SubResource("TileSet_7mycd")
 position = Vector2(135, 45)
 
 [node name="player" parent="TileMap" instance=ExtResource("3_wsri3")]
-position = Vector2(0, -28)
+position = Vector2(-128, -42)
 
 [node name="Camera2D2" type="Camera2D" parent="TileMap/player"]
 position = Vector2(0, -4)
