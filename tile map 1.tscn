@@ -1,6 +1,7 @@
-[gd_scene load_steps=39 format=4 uid="uid://dwhx48co0kpe1"]
+[gd_scene load_steps=41 format=4 uid="uid://b7jx3my2tuube"]
 
 [ext_resource type="Texture2D" uid="uid://cd58k42ri3ec3" path="res://backdrop 2.jpg" id="1_i3im3"]
+[ext_resource type="Texture2D" uid="uid://cl3fhex10tdc6" path="res://exclamation.png" id="2_2hoqw"]
 [ext_resource type="Texture2D" uid="uid://byn2a42jbby3s" path="res://art/tilesets/tilemap_packed.png" id="3_e462n"]
 [ext_resource type="Texture2D" uid="uid://ccrv0gkbspd0a" path="res://tilemap_packed - Copy.png" id="3_v5um8"]
 [ext_resource type="Texture2D" uid="uid://e3i5fsehyu2f" path="res://pixil-frame-0.png" id="4_8qpm5"]
@@ -176,6 +177,11 @@ texture = ExtResource("4_x14rd")
 10:11/0 = 0
 11:11/0 = 0
 12:11/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bqox6"]
+texture = ExtResource("2_2hoqw")
+texture_region_size = Vector2i(14, 14)
+0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i3im3"]
 texture = ExtResource("1_i3im3")
@@ -1389,6 +1395,7 @@ tile_size = Vector2i(14, 14)
 sources/2 = SubResource("TileSetAtlasSource_i3im3")
 sources/3 = SubResource("TileSetAtlasSource_v5um8")
 sources/0 = SubResource("TileSetAtlasSource_deofk")
+sources/1 = SubResource("TileSetAtlasSource_bqox6")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mqcb1"]
 texture = ExtResource("3_e462n")
@@ -2491,7 +2498,7 @@ collision_enabled = false
 
 [node name="TileMapLayer3" type="TileMapLayer" parent="."]
 texture_filter = 1
-tile_map_data = PackedByteArray("AADc//7/AwAKAAIAAADc////AwALAAIAAADd//7/AwALAAIAAADd////AwALAAIAAADe//7/AwALAAIAAADe////AwALAAIAAABBAAMAAAALAAYAAAA+AAMAAAALAAYAAAA8AAIAAAAIAAcAAAA8AAMAAAAIAAgAAAC0APD/AAALAAYAAAC3APD/AAALAAYAAACyAO//AAAIAAcAAACyAPD/AAAIAAgAAAC7APD/AwAEAAQAAACuAPH/AwADAAQAAAA=")
+tile_map_data = PackedByteArray("AADc//7/AwAKAAIAAADc////AwALAAIAAADd//7/AwALAAIAAADd////AwALAAIAAADe//7/AwALAAIAAADe////AwALAAIAAABBAAMAAAALAAYAAAA+AAMAAAALAAYAAAA8AAIAAAAIAAcAAAA8AAMAAAAIAAgAAAC0APD/AAALAAYAAAC3APD/AAALAAYAAACyAO//AAAIAAcAAACyAPD/AAAIAAgAAAC7APD/AwAEAAQAAACuAPH/AwADAAQAAAA7AQEAAQAAAAAAAAA=")
 tile_set = SubResource("TileSet_jgewo")
 collision_enabled = false
 

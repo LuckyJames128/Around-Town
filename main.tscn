@@ -1,10 +1,18 @@
-[gd_scene load_steps=8 format=3 uid="uid://bj8ax68x5e7eg"]
+[gd_scene load_steps=19 format=3 uid="uid://ds2n2lx6jlcsq"]
 
-[ext_resource type="Script" uid="uid://c51csons82lam" path="res://main.gd" id="1_il7hv"]
-[ext_resource type="PackedScene" uid="uid://dwhx48co0kpe1" path="res://tile map 1.tscn" id="2_h2yge"]
+[ext_resource type="Script" path="res://main.gd" id="1_il7hv"]
+[ext_resource type="PackedScene" uid="uid://b7jx3my2tuube" path="res://tile map 1.tscn" id="2_h2yge"]
 [ext_resource type="Texture2D" uid="uid://cd58k42ri3ec3" path="res://backdrop 2.jpg" id="3_lquwl"]
-[ext_resource type="PackedScene" uid="uid://c783etkf80i6b" path="res://player.tscn" id="3_wsri3"]
-[ext_resource type="PackedScene" path="res://npc_farmer.tscn" id="8_va8dd"]
+[ext_resource type="PackedScene" uid="uid://b1qc5xelnfvac" path="res://player.tscn" id="3_wsri3"]
+[ext_resource type="PackedScene" uid="uid://6hd80xmegwf6" path="res://actionable.tscn" id="5_272bh"]
+[ext_resource type="Resource" uid="uid://exwbjufa8dx8" path="res://dialogue/main.dialogue" id="6_5vw27"]
+[ext_resource type="PackedScene" uid="uid://d0ktnnn13p5ps" path="res://npc_carpenter.tscn" id="8_4c57u"]
+[ext_resource type="PackedScene" uid="uid://diwa32qhidvca" path="res://npc_farmer.tscn" id="8_va8dd"]
+[ext_resource type="PackedScene" path="res://actionable_2.tscn" id="9_efxa6"]
+[ext_resource type="Resource" uid="uid://cokv38bdnn2w6" path="res://dialogue/NPC Carpenter.dialogue" id="10_dg77c"]
+[ext_resource type="PackedScene" uid="uid://csff78hkf7tcl" path="res://NPC Grocery Worker.tscn" id="11_dg77c"]
+[ext_resource type="PackedScene" path="res://actionables_3.tscn" id="12_ycdy4"]
+[ext_resource type="Resource" uid="uid://dncmuu47n5f17" path="res://dialogue/NPC Grocery Worker.dialogue" id="13_ycdy4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v5um8"]
 texture = ExtResource("3_lquwl")
@@ -812,6 +820,15 @@ resource_local_to_scene = true
 tile_size = Vector2i(14, 14)
 sources/3 = SubResource("TileSetAtlasSource_v5um8")
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_kek77"]
+radius = 13.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ycdy4"]
+radius = 13.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_w48qg"]
+radius = 17.0294
+
 [node name="main" type="Node"]
 script = ExtResource("1_il7hv")
 
@@ -820,10 +837,19 @@ position = Vector2(0, -1)
 tile_set = SubResource("TileSet_7mycd")
 
 [node name="NPC_Farmer" parent="TileMap" instance=ExtResource("8_va8dd")]
-position = Vector2(135, 45)
+position = Vector2(4410, 35)
+
+[node name="Actionable" parent="TileMap/NPC_Farmer" instance=ExtResource("5_272bh")]
+collision_mask = 16
+dialogue_resource = ExtResource("6_5vw27")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/NPC_Farmer/Actionable"]
+shape = SubResource("CircleShape2D_kek77")
 
 [node name="player" parent="TileMap" instance=ExtResource("3_wsri3")]
-position = Vector2(-128, -42)
+position = Vector2(-127, -41)
+collision_layer = 113
+collision_mask = 115
 
 [node name="Camera2D2" type="Camera2D" parent="TileMap/player"]
 position = Vector2(0, -4)
@@ -831,3 +857,21 @@ scale = Vector2(2, 2)
 zoom = Vector2(3, 3)
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
+
+[node name="NPC Carpenter" parent="." instance=ExtResource("8_4c57u")]
+position = Vector2(864, 48)
+
+[node name="Actionable 2" parent="NPC Carpenter" instance=ExtResource("9_efxa6")]
+dialogue_resource = ExtResource("10_dg77c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC Carpenter/Actionable 2"]
+shape = SubResource("CircleShape2D_ycdy4")
+
+[node name="NPC Grocery Store Worker" parent="." instance=ExtResource("11_dg77c")]
+position = Vector2(4, 47)
+
+[node name="Actionables 3" parent="NPC Grocery Store Worker" instance=ExtResource("12_ycdy4")]
+dialogue_resource = ExtResource("13_ycdy4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC Grocery Store Worker/Actionables 3"]
+shape = SubResource("CircleShape2D_w48qg")

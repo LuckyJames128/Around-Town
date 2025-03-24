@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://c783etkf80i6b"]
+[gd_scene load_steps=14 format=3 uid="uid://b1qc5xelnfvac"]
 
 [ext_resource type="Script" uid="uid://dsqvevlvkncah" path="res://player.gd" id="1_rhrce"]
 [ext_resource type="Texture2D" uid="uid://n4nfbw23kck2" path="res://art/player/Gardener/Gardener (1).png" id="2_fdnob"]
@@ -73,10 +73,12 @@ position = Vector2(0, -0.609885)
 scale = Vector2(0.602683, 0.592731)
 polygon = PackedVector2Array(-8, -2, -6, 1, -6, 11, 4, 11, 4, 1, 6, -2, 6, -8, 3, -12, -5, -12, -8, -8)
 
-[node name="actionable_finder" type="Area2D" parent="."]
-collision_layer = 0
-collision_mask = 8
+[node name="Direction" type="Marker2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="actionable_finder"]
+[node name="ActionableFinder" type="Area2D" parent="Direction"]
+collision_layer = 48
+collision_mask = 48
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Direction/ActionableFinder"]
 position = Vector2(-0.5, 1.5)
 shape = SubResource("RectangleShape2D_520y3")

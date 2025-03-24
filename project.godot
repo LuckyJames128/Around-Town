@@ -48,7 +48,13 @@ move_up={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://dialogues/example.dialogue")
+locale/translations_pot_files=PackedStringArray("res://dialogue/main.dialogue", "res://art/tilesets/Around-Town-main/dialogues/example.dialogue", "res://art/tilesets/Around-Town-main (2)/Around-Town-main/dialogues/example.dialogue", "res://art/tilesets/dialogues/example.dialogue", "res://dialogue/NPC Carpenter.dialogue", "res://dialogue/NPC Grocery Worker.dialogue")
+
+[layer_names]
+
+2d_physics/layer_5="Actionable"
+2d_physics/layer_6="Actionable 2"
+2d_physics/layer_7="Actionables 3"
 
 [rendering]
 

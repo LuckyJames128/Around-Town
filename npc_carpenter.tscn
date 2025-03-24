@@ -1,0 +1,42 @@
+[gd_scene load_steps=8 format=3 uid="uid://d0ktnnn13p5ps"]
+
+[ext_resource type="Texture2D" uid="uid://bx31o7c24rh1k" path="res://art/Carpenter_WoodworkNPC/Carpenter_WoodworkNPC (1).png" id="1_5w042"]
+[ext_resource type="Script" uid="uid://dl5mb743qj0jq" path="res://npc_carpenter.gd" id="1_r80a7"]
+[ext_resource type="Texture2D" uid="uid://bn66rkj7scykr" path="res://art/Carpenter_WoodworkNPC/Carpenter_WoodworkNPC (2).png" id="2_yflaw"]
+[ext_resource type="Texture2D" uid="uid://de2h2x41450go" path="res://art/Carpenter_WoodworkNPC/Carpenter_WoodworkNPC (3).png" id="3_us2jr"]
+[ext_resource type="Texture2D" uid="uid://6ycdnolk1cgr" path="res://art/Carpenter_WoodworkNPC/Carpenter_WoodworkNPC (4).png" id="4_thhsc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ay14p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_5w042")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_yflaw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_us2jr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_thhsc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5w042"]
+radius = 6.0
+height = 18.0
+
+[node name="NPC Carpenter" type="StaticBody2D"]
+script = ExtResource("1_r80a7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.064375, 0.0780792)
+sprite_frames = SubResource("SpriteFrames_ay14p")
+frame_progress = 0.212732
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_5w042")
