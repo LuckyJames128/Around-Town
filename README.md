@@ -1,7 +1,7 @@
 # hackathon2025
 ## Controls, game notes
 - Left, Right, Up arrow keys for movement
-- Down key to initiate dialogue, Space to continue dialogue
+- Space key to initiate dialogue
 
 - Some NPC's have game-necessary quests
   - These are marked with an exclamation point over their head
