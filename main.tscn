@@ -1062,6 +1062,7 @@ position = Vector2(135, 45)
 position = Vector2(102, 48)
 
 [node name="player" parent="TileMap" instance=ExtResource("3_wsri3")]
+position = Vector2(135, 29)
 
 [node name="Camera2D2" type="Camera2D" parent="TileMap/player"]
 position = Vector2(0, -4)
