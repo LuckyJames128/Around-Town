@@ -9,5 +9,5 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-		$TileMap/NPC_Farmer/AnimatedSprite2D.flip_h = $TileMap/player.position.x < $TileMap/NPC_Farmer.position.x
+#func _process(_delta: float) -> void:
+		#$TileMap/NPC_Farmer/AnimatedSprite2D.flip_h = $TileMap/player.position.x < $TileMap/NPC_Farmer.position.x
